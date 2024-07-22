@@ -1,6 +1,7 @@
 const mongoose = require('mongoose')
-
-mongoose.connect('mongodb+srv://walex:5JG0pfx2IW50WUMU@wale.pgyxxwh.mongodb.net/multer')
+require('dotenv').config()
+const url = process.env.DATABASE
+mongoose.connect(url)
 .then(()=> {
     console.log('Database connected succeddfully')
 })
